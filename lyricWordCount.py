@@ -34,7 +34,3 @@ sorted_dict = sorted(dict.items(), key=lambda x: x[1])
 sorted_dict= sorted_dict[::-1]
 for x in range(len(sorted_dict)):
     print(sorted_dict[x])
-
-
-#issues with single char (x gon give it to ya)
-#deal with '-'
