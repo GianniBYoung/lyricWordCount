@@ -18,9 +18,11 @@ song.save_lyrics(filename='lyrics', extension='txt',
 
 extraTrim("lyrics.txt")
 
-lyrics = splittableLyrics()
 print("\n*********************************************************************************\n" +
       givenSong.title() + " by " + givenArtist.title() + " Lyrics:\n")
+
+lyrics = splittableLyrics()
+
 print("\n*********************************************************************************\n\n" +
       "Occurences of each unique word:\n")
 
