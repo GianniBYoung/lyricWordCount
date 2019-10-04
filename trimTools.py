@@ -1,4 +1,7 @@
+
 def extraTrim(fileName):
+    'Cuts out lines that say "chorus" or "verse x"'
+
     f = open(fileName, "r")
     text = f.readlines()
     f = open(fileName, "w")
@@ -10,6 +13,8 @@ def extraTrim(fileName):
 
 
 def splittableLyrics():
+    'Removes punctuation from lyrics after printing them, and returns the lyrics in a list suitable for our dictionary'
+
     lyrics = ""
     lyricsList = open("lyrics.txt").readlines()
     punctuation = """!"#$%&'()*+,./:;<=>?@[\]^_`{|}~"""
@@ -23,6 +28,8 @@ def splittableLyrics():
 
 
 def removeBoringwords(string,  dict):
+    'Removes words that are subjectively uninteresting'
+
     boringWords = ['a', 'as', 'now', 'i', 'me', 'an', 'the', 'or', 'be', 'its', 'not', '', 'this', 'that', 'for', 'he', 'her', 'him', 'they', 'but', 'do', 'no', 'on', 'from', 'how',
                    'there', 'has', """i'm""", 'did', 'can', 'his', 'to', 'in', 'am', 'is', 'my', 'so', 'have', 'these', 'ya', 'too', 'with', 'hers', 'and', 'if', '-', 'it', 'at', 'im', 'oh', 'of']
 

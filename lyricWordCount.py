@@ -1,7 +1,6 @@
 # Author: Gianni Young 10/01/2019
 import lyricsgenius
 import string
-# from re import split
 from trimTools import *
 genius = lyricsgenius.Genius("Your Access Token Here")
 
