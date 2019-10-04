@@ -1,7 +1,7 @@
 # Author: Gianni Young 10/01/2019
 import lyricsgenius
 import string
-from re import split
+# from re import split
 from trimTools import *
 genius = lyricsgenius.Genius("Your Access Token Here")
 
@@ -9,7 +9,7 @@ print("Please provide an artist to search for:\n")
 givenArtist = input()
 print("Please provide an song to search for:\n\n")
 givenSong = input()
-print("Include boring words?:y/N")
+print("Include boring words?: y/N")
 includeBoringwords = input()
 
 song = genius.search_song(givenSong, givenArtist, get_full_info=False)
@@ -26,9 +26,8 @@ lyrics = splittableLyrics()
 print("\n*********************************************************************************\n\n" +
       "Occurences of each unique word:\n")
 
-
 dict = {word: lyrics.count(
-    word) + 1 for word in split(r'[,\s]\s*', lyrics.lower())}
+    word) for word in lyrics.split(' ')}
 
 if includeBoringwords.lower() == 'n':
     dict = removeBoringwords(includeBoringwords, dict)

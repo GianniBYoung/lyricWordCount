@@ -13,8 +13,9 @@ def splittableLyrics():
     lyrics = ""
     lyricsList = open("lyrics.txt").readlines()
     punctuation = """!"#$%&'()*+,./:;<=>?@[\]^_`{|}~"""
+
     for line in lyricsList:
-        lyrics += "".join(line)
+        lyrics += "".join(line.replace('\n'," ").lower())
         print(line.strip('\n'))
         for c in punctuation:
             lyrics = lyrics.replace(c, "")
