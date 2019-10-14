@@ -7,3 +7,6 @@ pip3 install git+https://github.com/johnwmillr/LyricsGenius.git
 Next sign into genius and Create an api client to retrieve your access code:
       https://genius.com/api-clients
 Place your access token into wordCount.py where indicated and that's all! You're good to go!
+
+run with the command:
+python lyricWordCount.py
